@@ -40,3 +40,20 @@ export function addMovieToList(movie) {
       movie,
     };
 }
+
+export function handleMovieSearch(movie) {
+
+    const url = `http://www.omdbapi.com/?apikey=ee4d4f4e&t=${movie}`;
+
+    return function(dispatch){ // this function is called Thunk
+        fetch(url)
+        .then(response => response.json())
+        .then(movie => {
+            console.log('movie',movie);
+
+            // dispatch an action
+            // dispatch({ type:'ADD_SEARCH_RESULT',movie});
+        });
+    }
+    
+}

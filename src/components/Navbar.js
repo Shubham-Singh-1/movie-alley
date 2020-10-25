@@ -7,8 +7,8 @@ class Navbar extends React.Component{
     constructor(props){
         super(props);
         this.state = { 
-            showSearchResults = true,
-            searchText = ''
+            showSearchResults: true,
+            searchText: ''
         }
     }
 
@@ -21,12 +21,14 @@ class Navbar extends React.Component{
 
     handleSearch = () => {
         const { searchText } = this.state;
+
+        this.props.dispatch(handleMovieSearch(searchText));
     }
 
     handleChange = (e) => {
         this.setState({
             searchText: e.target.value
-        })
+        });
     }
 
     render () {
@@ -41,10 +43,10 @@ class Navbar extends React.Component{
                     {showSearchResults && (
                         <div className="search-results">
                             <div className="search-result">
-                                <img src={movie.Poster} alt="search-pic" />
+                                <img src={data[0].Poster} alt="search-pic" />
                                 <div className="movie-info">
-                                    <span>{movie.Title}</span>
-                                    <button onClick={() => this.handleAddToMovies(movie)}>
+                                    <span>{data[0].Title}</span>
+                                    <button onClick={() => this.handleAddToMovies(data[0])}>
                                         Add to Movies
                                     </button>
                                 </div>
