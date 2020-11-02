@@ -34,7 +34,7 @@ class Navbar extends React.Component{
 
     render () {
 
-        const { result: movie,showSearchResults } = this.props.search;
+        const { result: movie, showSearchResults } = this.props.search;
         // console.log("******THIS ONE",this.props);
 
         return (
