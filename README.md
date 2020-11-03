@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is an app made with complete Reactjs, search,add,favourite and unfovourite movies...
+
 ## Available Scripts
 
 In the project directory, you can run:
