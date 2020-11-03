@@ -89,10 +89,12 @@ class App extends React.Component {
 
 
 function mapStateToProps(state) {
+
   return {
     movies: state.movies,
     search: state.search
   }
+  
 }
 
 const connectedAppComponent = connect(mapStateToProps)(App);
