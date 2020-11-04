@@ -1,4 +1,4 @@
-This is an app made with complete Reactjs, search,add,favourite and unfovourite movies.....just fork it and do npm start and run on port 3000
+This is an app made completely with Reactjs, search,add,favourite and unfovourite movies.....just fork it and do npm start and run on port 3000
 
 ## Available Scripts
 
